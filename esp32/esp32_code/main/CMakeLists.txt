@@ -1,0 +1,15 @@
+idf_component_register(
+		SRCS 
+			"app_main.c"
+			"sensor/sensor_adc_i2c.c"
+			"telemetry/telemetry.c"
+			"net/net_wifi.c"
+			"net/net_mqtt.c"
+			"telemetry/time_sync.c"                   
+	       	INCLUDE_DIRS 
+		    	"."
+			"common"
+			"sensor"
+			"telemetry"
+			"net"
+			)

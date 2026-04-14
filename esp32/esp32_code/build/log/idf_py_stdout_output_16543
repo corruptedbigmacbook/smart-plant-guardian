@@ -1,0 +1,29 @@
+Command: ninja all
+[1/9] Performing build step for 'bootloader'
+[1/1] cd /home/nana/lecture10/build/bootloader && /home/nana/.espressif/python_env/idf6.0_py3.11_env/bin/python /home/nana/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/nana/lecture10/build/bootloader/bootloader.bin
+Bootloader binary size 0x6690 bytes. 0x970 bytes (8%) free.
+[2/9] No install step for 'bootloader'
+[3/9] Completed 'bootloader'
+[4/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/sensor/sensor_adc_i2c.c.obj
+/home/nana/lecture10/main/sensor/sensor_adc_i2c.c: In function 'sensor_task':
+/home/nana/lecture10/main/sensor/sensor_adc_i2c.c:283:15: warning: unused variable 'calculated_mv' [-Wunused-variable]
+  283 |         float calculated_mv = (averaged_raw * 3300.0f) / 4095.0f;
+      |               ^~~~~~~~~~~~~
+/home/nana/lecture10/main/sensor/sensor_adc_i2c.c: At top level:
+/home/nana/lecture10/main/sensor/sensor_adc_i2c.c:24:20: warning: 'TAG' defined but not used [-Wunused-variable]
+   24 | static const char *TAG = "test";
+      |                    ^~~
+[5/9] Linking C static library esp-idf/main/libmain.a
+[6/9] Generating esp-idf/esp_system/ld/sections.ld
+[7/9] Linking CXX executable lecture10.elf
+[8/9] Generating binary image from built executable
+Warning: Deprecated: Option '--flash_mode' is deprecated. Use '--flash-mode' instead.
+Warning: Deprecated: Option '--flash_freq' is deprecated. Use '--flash-freq' instead.
+Warning: Deprecated: Option '--flash_size' is deprecated. Use '--flash-size' instead.
+esptool v5.1.0
+Creating ESP32 image...
+Merged 2 ELF sections.
+Successfully created ESP32 image.
+Generated /home/nana/lecture10/build/lecture10.bin
+[9/9] cd /home/nana/lecture10/build && /home/nana/.espressif/python_env/idf6.0_py3.11_env/bin/python /home/nana/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/nana/lecture10/build/partition_table/partition-table.bin /home/nana/lecture10/build/lecture10.bin
+lecture10.bin binary size 0xe4ba0 bytes. Smallest app partition is 0x100000 bytes. 0x1b460 bytes (11%) free.

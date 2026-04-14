@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/home/nana/lecture10/build/CMakeFiles/bootloader
+/home/nana/lecture10/build/CMakeFiles/bootloader.rule
+/home/nana/lecture10/build/CMakeFiles/bootloader-complete.rule
+/home/nana/lecture10/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/home/nana/lecture10/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/home/nana/lecture10/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/home/nana/lecture10/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/home/nana/lecture10/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/home/nana/lecture10/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/home/nana/lecture10/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

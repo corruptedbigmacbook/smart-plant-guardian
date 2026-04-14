@@ -1,0 +1,925 @@
+Command: /home/nana/.espressif/python_env/idf6.0_py3.11_env/bin/python /home/nana/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/nana/lecture10/build/lecture10.elf /home/nana/lecture10/build/bootloader/bootloader.elf -m '/home/nana/.espressif/python_env/idf6.0_py3.11_env/bin/python' '/home/nana/esp/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6372
+load:0x40078000,len:15920
+ho 0 tail 12 room 4
+load:0x40080400,len:3880
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v6.0-dev-1489-g4e036983a7 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Feb 13 2026 19:12:39[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v3.1[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (82) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=20634h (132660) map[0m
+[0;32mI (137) esp_image: segment 1: paddr=0003065c vaddr=3ffb0000 size=04174h ( 16756) load[0m
+[0;32mI (143) esp_image: segment 2: paddr=000347d8 vaddr=40080000 size=0b840h ( 47168) load[0m
+[0;32mI (162) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a7e80h (687744) map[0m
+[0;32mI (406) esp_image: segment 4: paddr=000e7ea8 vaddr=4008b840 size=0cb88h ( 52104) load[0m
+[0;32mI (427) esp_image: segment 5: paddr=000f4a38 vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (440) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (440) boot: Disabling RNG early entropy source...[0m
+[0;32mI (450) cpu_start: Multicore app[0m
+[0;32mI (459) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (459) cpu_start: Pro cpu start user code[0m
+[0;32mI (459) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (461) app_init: Application information:[0m
+[0;32mI (465) app_init: Project name:     lecture10[0m
+[0;32mI (469) app_init: App version:      1[0m
+[0;32mI (472) app_init: Compile time:     Feb 13 2026 19:12:31[0m
+[0;32mI (477) app_init: ELF file SHA256:  bd806af43...[0m
+[0;32mI (481) app_init: ESP-IDF:          v6.0-dev-1489-g4e036983a7[0m
+[0;32mI (487) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (491) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (495) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (499) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (505) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (510) heap_init: At 3FFB8940 len 000276C0 (157 KiB): DRAM[0m
+[0;32mI (515) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (521) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (526) heap_init: At 400983C8 len 00007C38 (31 KiB): IRAM[0m
+[0;33mW (533) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (544) spi_flash: detected chip: generic[0m
+[0;32mI (548) spi_flash: flash io: dio[0m
+[0;33mW (551) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (564) main_task: Started on CPU0[0m
+[0;32mI (574) main_task: Calling app_main()[0m
+[0;32mI (604) wifi:wifi driver task: 3ffc0a48, prio:23, stack:6656, core=0[0m
+[0;32mI (614) wifi:wifi firmware version: 5984c42[0m
+[0;32mI (614) wifi:wifi certification version: v7.0[0m
+[0;32mI (614) wifi:config NVS flash: enabled[0m
+[0;32mI (614) wifi:config nano formatting: disabled[0m
+[0;32mI (614) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (624) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (624) wifi:Init management short buffer num: 32[0m
+[0;32mI (634) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (634) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (644) wifi:Init static rx buffer num: 10[0m
+[0;32mI (644) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (644) wifi_init: rx ba win: 6[0m
+[0;32mI (654) wifi_init: accept mbox: 6[0m
+[0;32mI (654) wifi_init: tcpip mbox: 32[0m
+[0;32mI (654) wifi_init: udp mbox: 6[0m
+[0;32mI (654) wifi_init: tcp mbox: 6[0m
+[0;32mI (664) wifi_init: tcp tx win: 5760[0m
+[0;32mI (664) wifi_init: tcp rx win: 5760[0m
+[0;32mI (664) wifi_init: tcp mss: 1440[0m
+[0;32mI (674) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (674) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (684) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (684) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (774) wifi:mode : sta (38:18:2b:e7:d6:58)[0m
+[0;32mI (774) wifi:enable tsf[0m
+[0;32mI (784) NET: WiFi started -> connecting...[0m
+[0;32mI (794) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (794) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1744) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1764) wifi:Association refused temporarily time 1000, comeback time 1100 (TUs)[0m
+[0;32mI (2894) wifi:state: assoc -> auth (0xb0)[0m
+[0;32mI (3874) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3894) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (3914) wifi:connected with gigacube-92F717, aid = 4, channel 6, BW20, bssid = 54:1f:8d:92:f7:17[0m
+[0;32mI (3914) wifi:security: WPA3-SAE, phy: bgn, rssi: -65[0m
+[0;32mI (3924) wifi:pm start, type: 1[0m
+
+[0;32mI (3924) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3954) wifi:<ba-add>idx:0 (ifx:0, 54:1f:8d:92:f7:17), tid:6, ssn:2, winSize:64[0m
+[0;32mI (4014) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (4984) esp_netif_handlers: sta ip: 192.168.0.248, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0;32mI (4984) NET: Got IP -> WiFi READY[0m
+[0;32mI (4984) time: Waiting for NTP time...[0m
+[0;32mI (4984) NET_MQTT: Wi-Fi ready -> starting MQTT once...[0m
+[0;32mI (4994) main_task: Returned from app_main()[0m
+[0;32mI (5014) wifi:<ba-add>idx:1 (ifx:0, 54:1f:8d:92:f7:17), tid:0, ssn:0, winSize:64[0m
+Light lux = 0.21
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;33mW (5494) TEL: Publish skipped (rc=-1): {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":7.95,"light_lux":.20.205658}[0m
+[0;32mI (5984) time: Waiting for NTP time...[0m
+Light lux = 0.21
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;33mW (6494) TEL: Publish skipped (rc=-1): {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.205658}[0m
+[0;32mI (6984) time: Time synced.[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;33mW (7494) TEL: Publish skipped (rc=-1): {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.171981}[0m
+[0;32mI (8264) NET_MQTT: MQTT connected[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (8494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.171981}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (9494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.171981}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (10494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.171981}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (11494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.171981}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (12494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.171981}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (13494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.171981}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (14494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.171981}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (15494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.171981}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (16504) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.171981}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (17494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.171981}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (18504) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.171981}[0m
+Light lux = 0.14
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (19494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.137673}[0m
+Light lux = 0.18
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (20494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.184332}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (21494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.171981}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (22494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.171981}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (23494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.171981}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (24494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.171981}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (25494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.171981}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (26494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.171981}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (27494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.171981}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (28494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.171981}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (29494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.14,"light_lux":.20.171981}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (30494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.79,"light_lux":.20.171981}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (31504) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.271699}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (32494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":3.10,"light_lux":.20.271699}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (33504) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":3.80,"light_lux":.20.271699}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (34494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":5.19,"light_lux":.20.171981}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (35494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":6.53,"light_lux":.20.171981}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (36494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":7.45,"light_lux":.20.171981}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (37494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":7.40,"light_lux":.20.171981}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (38494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":7.73,"light_lux":.20.171981}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (39494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":8.75,"light_lux":.20.171981}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (40504) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":9.21,"light_lux":.20.171981}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (41494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":9.14,"light_lux":.20.171981}[0m
+Light lux = 0.18
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (42494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":8.37,"light_lux":.20.184332}[0m
+Light lux = 0.15
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (43494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":11.13,"light_lux":.20.152122}[0m
+Light lux = 0.09
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (44494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":13.67,"light_lux":.20.085990}[0m
+Light lux = 0.06
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (45494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":13.51,"light_lux":.20.060800}[0m
+Light lux = 0.06
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (46494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":13.27,"light_lux":.20.060800}[0m
+Light lux = 0.06
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (47494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":13.10,"light_lux":.20.060800}[0m
+Light lux = 0.06
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (48494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":13.21,"light_lux":.20.060800}[0m
+Light lux = 0.06
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (49494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":12.87,"light_lux":.20.060800}[0m
+Light lux = 0.06
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (50504) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":12.88,"light_lux":.20.060800}[0m
+Light lux = 0.06
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (51494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":13.53,"light_lux":.20.060800}[0m
+Light lux = 0.06
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (52494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":13.71,"light_lux":.20.060800}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (53494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":7.20,"light_lux":.20.171981}[0m
+Light lux = 0.24
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (54494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":6.90,"light_lux":.20.238862}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (55494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":7.16,"light_lux":.20.171981}[0m
+Light lux = 0.21
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (56494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":7.08,"light_lux":.20.205658}[0m
+Light lux = 0.21
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (57494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":7.14,"light_lux":.20.205658}[0m
+Light lux = 0.21
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (58494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":7.16,"light_lux":.20.205658}[0m
+Light lux = 0.21
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (59504) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":7.17,"light_lux":.20.205658}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (60494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":7.25,"light_lux":.20.171981}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (61494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":7.18,"light_lux":.20.171981}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (62494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":7.28,"light_lux":.20.171981}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (63494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":6.95,"light_lux":.20.171981}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (64494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":7.50,"light_lux":.20.171981}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (65494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":7.53,"light_lux":.20.171981}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (66494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":7.20,"light_lux":.20.271699}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (67504) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":7.11,"light_lux":.20.271699}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (68494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":7.06,"light_lux":.20.271699}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (69494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":6.56,"light_lux":.20.271699}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (70494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":6.22,"light_lux":.20.271699}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (71494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":5.06,"light_lux":.20.271699}[0m
+Light lux = 0.24
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (72494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":5.69,"light_lux":.20.238862}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (73494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":5.25,"light_lux":.20.271699}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (74494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":4.65,"light_lux":.20.271699}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (75504) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.271699}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (76494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":3.60,"light_lux":.20.271699}[0m
+Light lux = 0.26
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (77494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":2.97,"light_lux":.20.257971}[0m
+Light lux = 0.30
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (78494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":2.20,"light_lux":.20.304243}[0m
+Light lux = 0.30
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (79494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":1.44,"light_lux":.20.304243}[0m
+Light lux = 0.30
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (80494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.68,"light_lux":.20.304243}[0m
+Light lux = 0.30
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (81494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.15,"light_lux":.20.304243}[0m
+Light lux = 0.30
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (82504) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.304243}[0m
+Light lux = 0.26
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (83494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.257971}[0m
+Light lux = 0.30
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (84494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.304243}[0m
+Light lux = 0.26
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (85494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.257971}[0m
+Light lux = 0.26
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (86494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.257971}[0m
+Light lux = 0.26
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (87494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.257971}[0m
+Light lux = 0.26
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (88494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.257971}[0m
+Light lux = 0.26
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (89494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.257971}[0m
+Light lux = 0.26
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (90494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.257971}[0m
+Light lux = 0.26
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (91494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.257971}[0m
+Light lux = 0.26
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (92494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.257971}[0m
+Light lux = 0.26
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (93494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.257971}[0m
+Light lux = 0.26
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (94494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.257971}[0m
+Light lux = 0.26
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (95494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.257971}[0m
+Light lux = 0.26
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (96494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.257971}[0m
+Light lux = 0.26
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (97494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.257971}[0m
+Light lux = 0.26
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (98494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.257971}[0m
+Light lux = 0.26
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (99494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.257971}[0m
+Light lux = 0.26
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (100494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.257971}[0m
+Light lux = 0.26
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (101494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.257971}[0m
+Light lux = 0.26
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (102494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.257971}[0m
+Light lux = 0.26
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (103494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.257971}[0m
+Light lux = 0.26
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (104494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.257971}[0m
+Light lux = 0.26
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (105494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.257971}[0m
+Light lux = 0.26
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (106494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.257971}[0m
+Light lux = 0.26
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (107494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.257971}[0m
+Light lux = 0.26
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (108504) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.257971}[0m
+Light lux = 0.26
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (109494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.257971}[0m
+Light lux = 0.26
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (110494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.257971}[0m
+Light lux = 0.26
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (111494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.257971}[0m
+Light lux = 0.26
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (112494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.257971}[0m
+Light lux = 0.26
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (113494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.257971}[0m
+Light lux = 0.26
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (114504) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.257971}[0m
+Light lux = 0.26
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (115494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.257971}[0m
+Light lux = 0.26
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (116504) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.257971}[0m
+Light lux = 0.26
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (117494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.257971}[0m
+Light lux = 0.26
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (118494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.257971}[0m
+Light lux = 0.26
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (119494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.257971}[0m
+Light lux = 0.26
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (120494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.257971}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (121494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.271699}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (122494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.271699}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (123494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.271699}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (124504) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.271699}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (125494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.271699}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (126494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.271699}[0m
+Light lux = 0.30
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (127494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.04,"light_lux":.20.304243}[0m
+Light lux = 0.30
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (128494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.35,"light_lux":.20.304243}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (129494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.89,"light_lux":.20.271699}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (130494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":1.73,"light_lux":.20.271699}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (131494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":3.01,"light_lux":.20.271699}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (132504) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":5.27,"light_lux":.20.271699}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (133504) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":5.26,"light_lux":.20.271699}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (134494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":5.85,"light_lux":.20.271699}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (135494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":6.43,"light_lux":.20.271699}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (136494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":6.91,"light_lux":.20.271699}[0m
+Light lux = 0.30
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (137494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":6.99,"light_lux":.20.304243}[0m
+Light lux = 0.30
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (138494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":7.06,"light_lux":.20.304243}[0m
+Light lux = 0.30
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (139494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":6.74,"light_lux":.20.304243}[0m
+Light lux = 0.30
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (140494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":6.58,"light_lux":.20.304243}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (141494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":6.12,"light_lux":.20.271699}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (142504) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":5.52,"light_lux":.20.271699}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (143494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":4.82,"light_lux":.20.271699}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (144494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":3.95,"light_lux":.20.271699}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (145494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":2.99,"light_lux":.20.271699}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (146494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":2.15,"light_lux":.20.271699}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (147494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":1.29,"light_lux":.20.271699}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (148494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.52,"light_lux":.20.271699}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (149494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.12,"light_lux":.20.271699}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (150494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.271699}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (151494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.271699}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (152494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.271699}[0m
+Light lux = 0.21
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (153494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.205658}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (154494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.171981}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (155494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.171981}[0m
+Light lux = 103.24
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (156494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.2103.240784}[0m
+Light lux = 84.51
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (157494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.284.511490}[0m
+Light lux = 82.74
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (158494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.282.735901}[0m
+Light lux = 80.94
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (159494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.280.935188}[0m
+Light lux = 81.71
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (160494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.281.711487}[0m
+Light lux = 80.22
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (161494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.280.222641}[0m
+Light lux = 77.84
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (162494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.277.843666}[0m
+Light lux = 97.54
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (163494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.297.541702}[0m
+Light lux = 136.44
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (164494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.2136.442337}[0m
+Light lux = 133.18
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (165494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.2133.182022}[0m
+Light lux = 132.95
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (166494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.2132.945908}[0m
+Light lux = 136.77
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (167504) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.2136.773499}[0m
+Light lux = 148.21
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (168494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.2148.209808}[0m
+Light lux = 155.21
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (169494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.2155.208954}[0m
+Light lux = 158.69
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (170494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.2158.694046}[0m
+Light lux = 159.04
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (171494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.2159.037979}[0m
+Light lux = 160.96
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (172494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.2160.962891}[0m
+Light lux = 159.53
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (173494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.2159.527206}[0m
+Light lux = 159.05
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (174494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.2159.045135}[0m
+Light lux = 158.50
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (175494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.2158.499207}[0m
+Light lux = 161.66
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (176494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.2161.657974}[0m
+Light lux = 160.78
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (177494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.2160.775284}[0m
+Light lux = 159.40
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (178494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.2159.403305}[0m
+Light lux = 158.42
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (179494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.2158.417725}[0m
+Light lux = 163.72
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (180504) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.2163.721466}[0m
+Light lux = 163.79
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (181494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.2163.785294}[0m
+Light lux = 160.70
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (182504) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.2160.704300}[0m
+Light lux = 160.04
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (183494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.2160.037674}[0m
+Light lux = 164.89
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (184494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.2164.894821}[0m
+Light lux = 164.32
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (185494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.2164.316864}[0m
+Light lux = 157.25
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (186494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.2157.245804}[0m
+Light lux = 122.33
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (187494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.2122.330688}[0m
+Light lux = 145.62
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (188494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.2145.617889}[0m
+Light lux = 155.12
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (189494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.2155.119080}[0m
+Light lux = 148.47
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (190494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.2148.465271}[0m
+Light lux = 151.15
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (191494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.2151.149170}[0m
+Light lux = 156.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (192494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.2156.169800}[0m
+Light lux = 159.08
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (193494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.2159.084198}[0m
+Light lux = 163.79
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (194494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.2163.792374}[0m
+Light lux = 171.20
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (195504) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.2171.201004}[0m
+Light lux = 1.75
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (196494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.21.747091}[0m
+Light lux = 0.18
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (197494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.184332}[0m
+Light lux = 0.14
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (198494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.137673}[0m
+Light lux = 14.43
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (199504) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.214.428930}[0m
+Light lux = 79.10
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (200494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.279.103836}[0m
+Light lux = 79.91
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (201494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.279.911453}[0m
+Light lux = 53.28
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (202494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.253.278320}[0m
+Light lux = 42.31
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (203494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.242.314499}[0m
+Light lux = 63.26
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (204494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.263.262123}[0m
+Light lux = 16.92
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (205494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.216.918631}[0m
+Light lux = 0.24
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (206504) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.238862}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (207494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.271699}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (208494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.271699}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (209494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.33,"light_lux":.20.271699}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (210494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.92,"light_lux":.20.271699}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (211494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":1.83,"light_lux":.20.271699}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (212494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":2.99,"light_lux":.20.271699}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (213494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":3.96,"light_lux":.20.271699}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (214504) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":4.75,"light_lux":.20.271699}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (215494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":5.61,"light_lux":.20.271699}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (216504) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":5.96,"light_lux":.20.271699}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (217494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":6.56,"light_lux":.20.271699}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (218494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":7.25,"light_lux":.20.271699}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (219494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":7.35,"light_lux":.20.271699}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (220494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":6.99,"light_lux":.20.171981}[0m
+Light lux = 0.24
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (221494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":7.06,"light_lux":.20.238862}[0m
+Light lux = 0.24
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (222494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":6.29,"light_lux":.20.238862}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (223494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":6.48,"light_lux":.20.271699}[0m
+Light lux = 0.24
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (224494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":5.25,"light_lux":.20.238862}[0m
+Light lux = 0.21
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (225494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":3.71,"light_lux":.20.205658}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (226494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":1.97,"light_lux":.20.271699}[0m
+Light lux = 0.30
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (227504) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.304243}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (228494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.171981}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (229494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.271699}[0m
+Light lux = 0.26
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (230494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.257971}[0m
+Light lux = 0.21
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (231494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.205658}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (232494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.171981}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (233494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.271699}[0m
+Light lux = 0.21
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (234504) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.205658}[0m
+Light lux = 0.27
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (235494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.271699}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (236494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.171981}[0m
+Light lux = 0.24
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (237494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.238862}[0m
+Light lux = 0.24
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (238494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.238862}[0m
+Light lux = 0.21
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (239494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.205658}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (240494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.171981}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (241494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.171981}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (242494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.171981}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (243494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.171981}[0m
+Light lux = 0.21
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (244494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.205658}[0m
+Light lux = 0.21
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (245494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.205658}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (246494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.171981}[0m
+Light lux = 0.21
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (247494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.205658}[0m
+Light lux = 0.21
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (248494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.205658}[0m
+Light lux = 0.21
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (249494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.205658}[0m
+Light lux = 0.24
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (250504) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.238862}[0m
+Light lux = 0.21
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (251494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.205658}[0m
+Light lux = 0.21
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (252494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.205658}[0m
+Light lux = 0.21
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (253494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.205658}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (254494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.171981}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (255494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.171981}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (256494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.171981}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (257504) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.171981}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (258494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.171981}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (259494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.171981}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (260494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.171981}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (261494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.171981}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (262504) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.00,"light_lux":.20.171981}[0m
+Light lux = 0.26
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (263504) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.09,"light_lux":.20.257971}[0m
+Light lux = 0.26
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (264494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":0.48,"light_lux":.20.257971}[0m
+Light lux = 0.24
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (265504) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":4.21,"light_lux":.20.238862}[0m
+Light lux = 0.21
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (266494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":2.41,"light_lux":.20.205658}[0m
+Light lux = 0.21
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (267494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":3.72,"light_lux":.20.205658}[0m
+Light lux = 0.21
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (268494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":4.78,"light_lux":.20.205658}[0m
+Light lux = 0.21
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (269494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":5.70,"light_lux":.20.205658}[0m
+Light lux = 0.21
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (270494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":6.33,"light_lux":.20.205658}[0m
+Light lux = 0.21
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (271494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":6.83,"light_lux":.20.205658}[0m
+Light lux = 0.21
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (272494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":6.96,"light_lux":.20.205658}[0m
+Light lux = 0.21
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (273494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":6.87,"light_lux":.20.205658}[0m
+Light lux = 0.21
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (274494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":6.64,"light_lux":.20.205658}[0m
+Light lux = 0.21
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (275494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":7.04,"light_lux":.20.205658}[0m
+Light lux = 0.17
+Temp: 0.00 C, Hum: 0.00 %, Pressure: 0.00 hPa
+[0;32mI (276494) TEL: Published: {"timestamp":"1970-01-01T00:00:04Z","temperature_c":0.00,"humidity_pct":0.00,"soil_moisture_raw":6.18,"light_lux":.20.171981}[0m

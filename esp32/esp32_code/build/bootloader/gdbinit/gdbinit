@@ -1,0 +1,2 @@
+source /home/nana/lecture10/build/bootloader/gdbinit/symbols
+source /home/nana/lecture10/build/bootloader/gdbinit/connect

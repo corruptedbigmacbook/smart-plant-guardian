@@ -1,0 +1,2 @@
+source /home/nana/lecture10/build/gdbinit/symbols
+source /home/nana/lecture10/build/gdbinit/connect
